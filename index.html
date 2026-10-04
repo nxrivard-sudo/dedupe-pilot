@@ -1,0 +1,32 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dedupe Pilot — merge duplicate contacts in your spreadsheet</title>
+<meta name="description" content="Spreadsheet add-on that finds and merges duplicate contacts: exact email, same phone, and fuzzy name + company matches. Original data never changed.">
+<link rel="stylesheet" href="style.css"></head><body>
+<h1>Dedupe Pilot</h1>
+<p class="sub">One clean row per contact. Merge duplicate leads and customers in your spreadsheet in about a minute.</p>
+<p><b>Coming soon to the Google Workspace Marketplace.</b> <span class="note">(Listing pending Google review.)</span></p>
+<h2>What it catches that exact-match tools miss</h2>
+<ul>
+<li><b>Same person, different spelling:</b> "Jon Smtih" / "JON SMITH" / "jon smith"</li>
+<li><b>Same company, different suffix:</b> "Acme Inc." = "ACME, LLC" = "acme"</li>
+<li><b>Same phone, different format:</b> (512) 555-0134 = 512.555.0134 = +1 512 555 0134</li>
+<li><b>Shared mailboxes:</b> two different names on one email go to a review list, so they aren't merged by accident</li>
+</ul>
+<h2>Safe by design</h2>
+<ul>
+<li>Your original tab is never edited. Results go to new tabs: Clean, Report, Review, Invalid.</li>
+<li>Every merged row lists the original row numbers it came from. Nothing silently disappears.</li>
+<li>Runs inside your spreadsheet. It only has access to the file you open it in, and it sends no data to us or anyone else.</li>
+</ul>
+<h2>How accurate is it?</h2>
+<p>On a test file of 1,111 generated (fake) contact rows with known duplicates, Dedupe Pilot found 99.6% of true duplicate pairs and 98.2% of its merges were correct. Unclear pairs are sent to a Review tab for you to decide. <span class="note">Your results depend on your data; always spot-check the Review tab.</span></p>
+<h2>Pricing</h2>
+<table><tr><th></th><th>Free</th><th>Pro</th></tr>
+<tr><td>Rows per run</td><td>500</td><td>25,000</td></tr>
+<tr><td>Fuzzy name + company matching, phone/email cleanup</td><td>✓</td><td>✓</td></tr>
+<tr><td>Review + audit tabs</td><td>✓</td><td>✓</td></tr>
+<tr><td>Price</td><td>$0</td><td>$29 / year, or $49 one-time</td></tr></table>
+<p><a class="cta" href="pro.html">Get Pro</a></p>
+<footer><a href="support.html">Support</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a><br>
+Google Sheets and Google Workspace are trademarks of Google LLC. Dedupe Pilot is not affiliated with or endorsed by Google.</footer>
+</body></html>
