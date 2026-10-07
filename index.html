@@ -1,23 +1,33 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Dedupe Pilot — merge duplicate contacts in your spreadsheet</title>
-<meta name="description" content="Spreadsheet add-on that finds and merges duplicate contacts: exact email, same phone, and fuzzy name + company matches. Original data never changed.">
+<title>Dedupe Pilot: find and merge duplicate contacts in Google Sheets</title>
+<meta name="description" content="Dedupe Pilot is a Google Sheets add-on that finds and merges duplicate contacts in the spreadsheet you open it in, by email, phone + name/company, and fuzzy name + company matching. Results go to new Clean, Report, Review and Invalid tabs.">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Dedupe Pilot"><meta property="og:title" content="Dedupe Pilot: find and merge duplicate contacts in Google Sheets"><meta property="og:description" content="Google Sheets add-on that finds and merges duplicate contacts by email and phone + name. Original data is never changed."><meta property="og:url" content="https://nxrivard-sudo.github.io/dedupe-pilot/">
+<link rel="canonical" href="https://nxrivard-sudo.github.io/dedupe-pilot/">
 <link rel="stylesheet" href="style.css"></head><body>
 <h1>Dedupe Pilot</h1>
-<p class="sub">One clean row per contact. Merge duplicate leads and customers in your spreadsheet in about a minute.</p>
-<p><b>Available as a Google Sheets add-on after Workspace Marketplace approval.</b></p>
+<p class="sub">A Google Sheets add-on that finds and merges duplicate contacts.</p>
+<p><b>What Dedupe Pilot does:</b> Dedupe Pilot is a Google Sheets add-on. You open it from <i>Extensions → Dedupe Pilot</i> in a spreadsheet that holds a contact list (for example leads, customers or members, with a header row). It finds rows that are the same person: the same email address, the same phone number with a matching name or company, or names and companies that are spelled differently but match closely. It then writes the results to four new tabs in the same spreadsheet: <b>Clean</b> (one row per contact), <b>Report</b> (which original rows were merged), <b>Review</b> (unclear pairs for you to decide) and <b>Invalid</b> (malformed emails or phone numbers). Your original tab is never edited.</p>
+<p>No account or sign-in is needed to read this page. Dedupe Pilot's <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Service</a> are public. Status: awaiting Google Workspace Marketplace approval.</p>
 <h2>What it catches that exact-match tools miss</h2>
 <ul>
 <li><b>Same person, different spelling:</b> "Jon Smtih" / "JON SMITH" / "jon smith"</li>
 <li><b>Same company, different suffix:</b> "Acme Inc." = "ACME, LLC" = "acme"</li>
 <li><b>Same phone, different format:</b> (512) 555-0134 = 512.555.0134 = +1 512 555 0134</li>
-<li><b>Shared mailboxes:</b> two different names on one email go to a review list, so they aren't merged by accident</li>
+<li><b>Shared mailboxes:</b> two different names on one email go to the Review tab, so they aren't merged by accident</li>
 </ul>
 <h2>Safe by design</h2>
 <ul>
 <li>Your original tab is never edited. Results go to new tabs: Clean, Report, Review, Invalid.</li>
 <li>Every merged row lists the original row numbers it came from. Nothing silently disappears.</li>
-<li>Runs inside your spreadsheet. It only has access to the file you open it in, and it sends no data to us or anyone else.</li>
+<li>Runs inside Google Sheets. It can only access the spreadsheet you open it in, and it sends no spreadsheet data to us or anyone else.</li>
 </ul>
+<h2>Google permissions it asks for</h2>
+<ul>
+<li><b>See, edit, create and delete only the spreadsheet it is opened in</b> (<code>spreadsheets.currentonly</code>): to read the contact tab and write the result tabs.</li>
+<li><b>Display content in a sidebar or dialog inside Google Sheets</b> (<code>script.container.ui</code>): for the Dedupe Pilot sidebar.</li>
+<li>Google also lists your email address and basic profile (<code>userinfo.email</code>, <code>userinfo.profile</code>) as default scopes for Marketplace add-ons. Dedupe Pilot does not read or store them.</li>
+</ul>
+<p>Details: <a href="privacy.html">Privacy Policy</a>.</p>
 <h2>How accurate is it?</h2>
 <p>On a test file of 1,111 generated (fake) contact rows with known duplicates, Dedupe Pilot found 99.6% of true duplicate pairs and 98.2% of its merges were correct. Unclear pairs are sent to a Review tab for you to decide. <span class="note">Your results depend on your data; always spot-check the Review tab.</span></p>
 <h2>Pricing</h2>
@@ -27,6 +37,6 @@
 <tr><td>Review + audit tabs</td><td>✓</td><td>✓</td></tr>
 <tr><td>Price</td><td>$0</td><td>$29 / year, or $49 one-time</td></tr></table>
 <p><a class="cta" href="pro.html">Get Pro</a></p>
-<footer><a href="support.html">Support</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="https://nxrivard-sudo.github.io/audiencetrim/">Also from us: AudienceTrim, a free Mailchimp audience audit</a><br>
-Google Sheets and Google Workspace are trademarks of Google LLC. Dedupe Pilot is not affiliated with or endorsed by Google.</footer>
+<footer><a href="support.html">Support</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a> · Contact: <a href="mailto:nxrivard@gmail.com">nxrivard@gmail.com</a><br>
+Dedupe Pilot is operated by Hook &amp; Cook, San Clemente, CA. Google Sheets and Google Workspace are trademarks of Google LLC. Dedupe Pilot is not affiliated with or endorsed by Google.</footer>
 </body></html>
